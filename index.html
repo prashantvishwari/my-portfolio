@@ -1,1 +1,208 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prashant Gupta | Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Fira Code', monospace;
+      background: #0d0d1a;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #12122b;
+      padding: 3rem 1rem;
+      text-align: center;
+      animation: terminalHeader 2s steps(40) 1 normal both;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    @keyframes terminalHeader {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #00ff9f;
+    }
+    header p {
+      font-size: 1rem;
+      color: #aaa;
+      animation: fadeIn 2s ease-in-out 2s forwards;
+      opacity: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #1a1a2f;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00e3ae;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #4e7fff;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: terminalText 1.2s steps(60) 1 normal both;
+      overflow: hidden;
+      white-space: pre-wrap;
+    }
+    @keyframes terminalText {
+      from { width: 0; opacity: 0; }
+      to { width: 100%; opacity: 1; }
+    }
+    h2 {
+      color: #00e3ae;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .project {
+      margin-bottom: 2rem;
+    }
+    .project a {
+      font-weight: 700;
+      color: #4e7fff;
+      text-decoration: none;
+    }
+    .project a:hover {
+      color: #00e3ae;
+    }
+    .btn-download {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      background: #00e3ae;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      box-shadow: 0 4px 12px rgba(0, 227, 174, 0.4);
+      transition: transform 0.3s;
+    }
+    .btn-download:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1a1a2f;
+      color: #aaa;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>&gt; Prashant Gupta</h1>
+    <p>// BCA Graduate | Full-Stack Web Developer | Creator of CompareBuddy.in</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate BCA graduate and self-taught web developer who enjoys creating modern, fast, and interactive web applications.
+      I’ve worked with startups, participated in internships, and developed independent projects such as CompareBuddy.in, a real-time product comparison platform.
+      I'm eager to collaborate and contribute to innovative tech-driven solutions.
+    </p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="info-grid">
+      <div>
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML5, CSS3, JavaScript</li>
+          <li>Responsive Design, Flexbox, Grid</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Backend & Tools</h3>
+        <ul>
+          <li>Python (Basics), MySQL</li>
+          <li>Git, GitHub, VSCode</li>
+          <li>Google Sheets, MS Excel</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Problem-solving</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project">
+      <a href="https://comparebuddy.in" target="_blank">CompareBuddy.in</a>
+      <p>Online product comparison tool for best deals, prices, and affiliate suggestions.</p>
+    </div>
+    <div class="project">
+      <strong>PetSphere</strong>
+      <p>All-in-one pet care site with HTML/CSS/JS for profile management and tips.</p>
+    </div>
+    <div class="project">
+      <strong>PawPals</strong>
+      <p>Rescue website connecting stray animals to adopters with donation options.</p>
+    </div>
+    <div class="project">
+      <strong>QR Code Generator</strong>
+      <p>Generates QR codes for links/text using HTML, CSS, and JavaScript.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:prashantgupta727598@gmail.com">prashantgupta727598@gmail.com</a></p>
+    <p>Phone: +91 7275981371</p>
+    <p>Location: Dehradun, Uttarakhand</p>
+    <a class="btn-download" href="#">Download Resume</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Prashant Gupta. All Rights Reserved. Built with 💻 in HTML, CSS, and ❤️
+  </footer>
+</body>
+</html>
