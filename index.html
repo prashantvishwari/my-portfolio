@@ -9,13 +9,13 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Fira Code', monospace;
-      background: #0d0d1a;
+      background: linear-gradient(120deg, #0f0f1f, #1b1b3a);
       color: #f0f0f0;
       scroll-behavior: smooth;
     }
     header {
-      background: #12122b;
-      padding: 3rem 1rem;
+      background: radial-gradient(circle at top left, #12122b, #000);
+      padding: 4rem 1rem;
       text-align: center;
       animation: terminalHeader 2s steps(40) 1 normal both;
       overflow: hidden;
@@ -26,12 +26,12 @@
       to { width: 100% }
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
       color: #00ff9f;
     }
     header p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #aaa;
       animation: fadeIn 2s ease-in-out 2s forwards;
       opacity: 0;
@@ -40,56 +40,61 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background: #1a1a2f;
+      background: rgba(26, 26, 47, 0.9);
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
+      backdrop-filter: blur(10px);
     }
     nav a {
       color: #00e3ae;
       font-weight: 600;
       text-decoration: none;
-      transition: color 0.3s;
+      transition: color 0.3s, transform 0.3s;
     }
     nav a:hover {
       color: #4e7fff;
+      transform: scale(1.1);
     }
     .section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
+      padding: 5rem 2rem;
+      max-width: 1100px;
       margin: auto;
-      animation: terminalText 1.2s steps(60) 1 normal both;
-      overflow: hidden;
-      white-space: pre-wrap;
+      animation: fadeInUp 1s ease-out both;
     }
-    @keyframes terminalText {
-      from { width: 0; opacity: 0; }
-      to { width: 100%; opacity: 1; }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     h2 {
       color: #00e3ae;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
     }
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
     ul {
       padding-left: 1.5rem;
     }
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
     .project {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      background: #12122b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
     }
     .project a {
       font-weight: 700;
       color: #4e7fff;
       text-decoration: none;
+      font-size: 1.2rem;
     }
     .project a:hover {
       color: #00e3ae;
@@ -97,17 +102,18 @@
     .btn-download {
       display: inline-block;
       margin-top: 2rem;
-      padding: 0.7rem 1.5rem;
+      padding: 0.8rem 1.7rem;
       background: #00e3ae;
       color: #000;
       font-weight: bold;
       text-decoration: none;
       border-radius: 25px;
-      box-shadow: 0 4px 12px rgba(0, 227, 174, 0.4);
-      transition: transform 0.3s;
+      box-shadow: 0 4px 16px rgba(0, 227, 174, 0.4);
+      transition: transform 0.3s, background 0.3s;
     }
     .btn-download:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
+      background: #00ffcc;
     }
     footer {
       text-align: center;
